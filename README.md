@@ -86,7 +86,7 @@ export const Styles.StyledButton = styled.button<Pick<ButtonProps, 'variant'>>`
 `;
 ```
 
-## 🎨 Atomic Design Implementation
+### 🎨 Atomic Design Implementation
 
 Organize your components based on the Atomic Design principle:
 
@@ -183,9 +183,9 @@ const UserProfile = ({ userId }) => {
 };
 ```
 
-# 3. TypeScript Best Practices
+## 3. TypeScript Best Practices
 
-## 🔍 Types vs Interfaces
+### 🔍 Types vs Interfaces
 
 Use types for unions, intersections, or when you need to use mapped types. Use interfaces for object shapes that you might want to extend later.
 
@@ -217,7 +217,7 @@ interface AdminUser extends User {
 }
 ```
 
-## 📚 Use Type Inference
+### 📚 Use Type Inference
 
 Let TypeScript infer types when it's clear what the type should be:
 
@@ -231,7 +231,7 @@ const user = {
 }; // inferred as { name: string; age: number; }
 ```
 
-## ❌ Avoid unnecessary annotations:
+### ❌ Avoid unnecessary annotations:
 
 ```typescript
 const numbers: number[] = [1, 2, 3, 4];
@@ -241,7 +241,7 @@ const user: { name: string; age: number } = {
 };
 ```
 
-## 🚫 Avoid **any**
+### 🚫 Avoid **any**
 
 Use **unknown** instead of **any** when you're unsure of a type. This forces you to perform type checking before using the value:
 
@@ -265,7 +265,7 @@ function processValue(value: any) {
 }
 ```
 
-## 🔒 Use Readonly for Immutable Data
+### 🔒 Use Readonly for Immutable Data
 
 When you have data that shouldn't be modified, use **Readonly** or **readonly**:
 
@@ -283,7 +283,7 @@ const config: Readonly<Config> = {
 };
 ```
 
-## 🧩 Utilize Utility Types
+### 🧩 Utilize Utility Types
 
 TypeScript provides several utility types that can help you manipulate types:
 
@@ -300,7 +300,7 @@ type UserWithoutId = Omit<User, "id">;
 type PartialUser = Partial<User>;
 ```
 
-## 🎭 Use Discriminated Unions for Complex State
+### 🎭 Use Discriminated Unions for Complex State
 
 When dealing with complex state that can be in different modes, use discriminated unions:
 
@@ -327,9 +327,9 @@ function renderState(state: State) {
 
 Remember, TypeScript is a powerful tool that can help you write more robust and self-documenting code. Use its features wisely to improve your code quality and catch errors early in development.💻
 
-# 4. React Component Best Practices
+## 4. React Component Best Practices
 
-## 🧩 Use Functional Components and Hooks
+### 🧩 Use Functional Components and Hooks
 
 Functional components with hooks are now the preferred way to write React components.
 
@@ -371,7 +371,7 @@ class UserProfile extends React.Component {
 }
 ```
 
-## 🎭 Prop Types for Type Checking
+### 🎭 Prop Types for Type Checking
 
 Use PropTypes to catch bugs early by type-checking props.
 
@@ -392,7 +392,7 @@ const Button = ({ text, onClick }: PropTypes) => (
 );
 ```
 
-## 🔄 Keys in Lists
+### 🔄 Keys in Lists
 
 Always use unique keys when rendering lists of elements.
 
@@ -470,7 +470,7 @@ Button.defaultProps = {
 };
 ```
 
-## 🎨 Use Enum for Predefined Options
+### 🎨 Use Enum for Predefined Options
 
 When a prop has a fixed set of possible values, use an enum:
 
@@ -493,9 +493,9 @@ const Button: React.FC<ButtonProps> = ({ size, ...props }) => {
 };
 ```
 
-# 5. State Management Tips
+## 5. State Management Tips
 
-## 🎣 Use Hooks for Local State
+### 🎣 Use Hooks for Local State
 
 For component-level state, use the **useState** hook.
 
@@ -513,7 +513,7 @@ const Counter = () => {
 };
 ```
 
-## 🌳 Context API for Shared State
+### 🌳 Context API for Shared State
 
 Use Context for state that needs to be accessed by multiple components.
 
@@ -534,9 +534,9 @@ const ThemedButton = () => {
 };
 ```
 
-# 6. Styling and CSS
+## 6. Styling and CSS
 
-## 💅 CSS-in-JS with Styled Components
+### 💅 CSS-in-JS with Styled Components
 
 Use Styled Components for component-specific styles.
 
@@ -557,7 +557,7 @@ import * as Styles from "./styles";
 const MyComponent = () => <Button>Click me</Button>;
 ```
 
-## 🎨 Use CSS Modules for Local Scoping
+### 🎨 Use CSS Modules for Local Scoping
 
 CSS Modules help avoid naming conflicts and provide local scoping.
 
@@ -571,9 +571,9 @@ const Button = ({ children }) => (
 );
 ```
 
-# 7. Performance Optimization
+## 7. Performance Optimization
 
-## 🏃‍♂️ Use React.memo for Pure Components
+### 🏃‍♂️ Use React.memo for Pure Components
 
 Wrap pure functional components with React.memo to prevent unnecessary re-renders.
 
@@ -585,7 +585,7 @@ const ExpensiveComponent = React.memo(({ data }) => {
 });
 ```
 
-## 🔍 Use the React DevTools Profiler
+### 🔍 Use the React DevTools Profiler
 
 Regularly profile your app to identify performance bottlenecks.
 
