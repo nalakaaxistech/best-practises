@@ -2,7 +2,7 @@
 
 ## 🎯 Abstract
 
-We are creating a component library called UI for ready-me-web. This guide aims to clarify the classification of components into atoms, molecules, organisms, etc., following the Atomic Design principle.
+This guide aims to clarify the classification of components into atoms, molecules, organisms, etc., following the Atomic Design principle.
 
 ## 🔍 Scope
 
@@ -58,28 +58,28 @@ Use these questions to determine the classification of a component:
 - Is it a basic UI element?
 - Can it function independently without losing its meaning?
 - Is it a raw HTML element?
-- Examples: button, input field, icon, label
+  - Examples: button, input field, icon, label
 
 ### Molecules
 
 - Does it consist of multiple atoms?
 - Is it a small, self-contained component?
 - Does it represent a simple interaction or feature?
-- Examples: search bar, tags, form fields with labels, datepicker, checkbox group
+  - Examples: search bar, tags, form fields with labels, datepicker, checkbox group
 
 ### Organisms
 
 - Does it consist of molecules and/or atoms?
 - Does it form a distinct section of the UI?
 - Does it serve a specific purpose or function within a larger context?
-- Examples: header, footer, product card
+  - Examples: header, footer, product card
 
 ### Templates
 
 - Does it define the layout of a page or a section?
 - Does it place organisms within a specific context?
 - Does it lack real content but define the structure and placement of elements?
-- Examples: Product details, Blog post, Settings
+  - Examples: Product details, Blog post, Settings
 
 ### Pages
 
